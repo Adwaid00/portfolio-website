@@ -5,14 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #f39c12;
+        }
+        section {
+            padding: 100px 20px;
+        }
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 20px;
+            border: 5px solid white;
+        }
+        .project-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 350px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+        .project-img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 12px 24px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        .testimonials {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
+        <h1>ADWAID P K</h1>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#resume">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -21,12 +116,51 @@
     
     <section id="about">
         <h2>About Me</h2>
-        <p>Brief introduction about your education and experience in embedded systems.</p>
+        <img src="your-profile.jpg" alt="Profile Photo" class="profile-img">
+        <p>Passionate and detail-oriented Electronics and Communication Engineer with hands-on 
+            experience in Embedded Systems. Seeking an Embedded Systems Engineer role to apply 
+            expertise in firmware development, real-time debugging, peripheral driver development, 
+            and microcontroller programming. Adept at low-power embedded systems, memory 
+            optimization, sensor interfacing, secure boot, real-time data processing, and flash memory 
+            management. Eager to work in a challenging environment that fosters professional growth 
+            and cutting-edge technology.</p>
     </section>
     
     <section id="projects">
         <h2>Projects</h2>
-        <p>Showcase your embedded systems projects here.</p>
+        <div class="project-container">
+            <div class="project-card">
+                <h3>Project 1</h3>
+                <img src="project1.jpg" alt="Project 1 Image" class="project-img">
+                <p>Description of Project 1.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <img src="project2.jpg" alt="Project 2 Image" class="project-img">
+                <p>Description of Project 2.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill">C Programming</div>
+            <div class="skill">Embedded Systems</div>
+            <div class="skill">Microcontrollers</div>
+            <div class="skill">Communication Protocols</div>
+            <div class="skill">PCB Design</div>
+            <div class="skill">PCB Design</div>
+            <div class="skill">PCB Design</div>
+            <div class="skill">Python</div>
+            <div class="skill">PCB Design</div>
+        </div>
+    </section>
+    
+    <section id="testimonials" class="testimonials">
+        <h2>Testimonials</h2>
+        <p class="testimonial">"Great engineer with strong problem-solving skills!" - Client A</p>
+        <p class="testimonial">"Impressive embedded system projects!" - Client B</p>
     </section>
     
     <section id="resume">
@@ -36,7 +170,7 @@
     
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: your.email@example.com</p>
+        <p>Email: pkadwaith@example.com</p>
         <p><a href="https://linkedin.com/in/yourprofile">LinkedIn</a></p>
         <p><a href="https://github.com/yourgithub">GitHub</a></p>
     </section>
